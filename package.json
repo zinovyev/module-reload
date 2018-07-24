@@ -1,0 +1,25 @@
+{
+  "name": "module-reload",
+  "version": "1.1.0",
+  "description": "Reload required node modules",
+  "main": "reload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zinovyev/module-reload.git"
+  },
+  "keywords": [
+    "node",
+    "reload",
+    "require",
+    "module"
+  ],
+  "author": "Ivan Zinovyev <ivan@zinovyev.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zinovyev/module-reload/issues"
+  },
+  "homepage": "https://github.com/zinovyev/module-reload#readme"
+}
