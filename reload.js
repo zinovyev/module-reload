@@ -32,19 +32,16 @@ var ReloadHistory = function() {
         return i; 
       }
     } 
-
     return false;
   }
 
   this.reloadModule = function(module) {
     if (module) {
       var realPath = this.resolvePath(module);
-      console.log(realPath);
-      console.log(this.requireModule(realPath));
-      if (this.requireModule(realPath)) {
-        console.log(this.requireModule(realPath));
-        console.log(realPath);
+      var required = this.requireModule(realPath);
+      if (required) {
         this.addModule(realPath); 
+        return required;
       }
     }
     return false;
@@ -75,10 +72,10 @@ var ReloadHistory = function() {
     var module = null;
     for (var i = 0, l = arguments.length; i < l; ++i) {
       module = arguments[i];
-      this.reloadModule(module);
+      if (module) {
+        return this.reloadModule(module);
+      }
     }
-
-    return modules.length;
   }
 }
 
